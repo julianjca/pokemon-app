@@ -1,8 +1,19 @@
 import React from "react";
 
 import { ImageWrapper, PokemonImage, PokemonName } from "./styles";
+import { usePokemonDispatch } from "../../context";
+import Button from "../Button";
 
 const PokemonDetail = ({ pokemonData }) => {
+  const dispatch = usePokemonDispatch();
+
+  const handleAddPokemon = () => {
+    dispatch({
+      type: "ADD_POKEMON",
+      pokemon: pokemonData.name,
+    });
+  };
+
   return (
     <div
       style={{
@@ -20,6 +31,7 @@ const PokemonDetail = ({ pokemonData }) => {
         />
       </ImageWrapper>
       <PokemonName>{pokemonData.name}</PokemonName>
+      <Button onClick={handleAddPokemon}>Add Pokemon</Button>
     </div>
   );
 };

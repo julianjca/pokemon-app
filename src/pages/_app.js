@@ -3,6 +3,7 @@ import React from "react";
 import { globalStyles, PageContainer } from "../components/Shared";
 import Header from "../components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import { PokemonStateProvider } from "../context";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -39,11 +40,13 @@ const client = new ApolloClient({
 function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
-      <PageContainer>
-        {globalStyles}
-        <Header />
-        <Component {...pageProps} />
-      </PageContainer>
+      <PokemonStateProvider>
+        <PageContainer>
+          {globalStyles}
+          <Header />
+          <Component {...pageProps} />
+        </PageContainer>
+      </PokemonStateProvider>
     </ApolloProvider>
   );
 }
