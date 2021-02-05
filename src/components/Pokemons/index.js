@@ -2,6 +2,10 @@ import React from "react";
 
 import { gql, useQuery } from "@apollo/client";
 
+import PokemonCard from "../PokemonCard";
+import { Grid } from "./styles";
+import Button from "../Button";
+
 const GET_POKEMONS = gql`
   query pokemons($limit: Int, $offset: Int) {
     pokemons(limit: $limit, offset: $offset) {
@@ -32,19 +36,37 @@ const Pokemons = () => {
   if (error) return `Error! ${error.message}`;
 
   return (
-    <div>
-      {JSON.stringify(data)}
-      <button
-        onClick={() =>
-          fetchMore({
-            variables: {
-              offset: data.pokemons.results.length,
-            },
-          })
-        }
+    <div
+      style={{
+        padding: "4rem 0",
+      }}
+    >
+      {data && (
+        <Grid>
+          {data.pokemons.results.map((pokemon, key) => {
+            return <PokemonCard key={key} {...pokemon} />;
+          })}
+        </Grid>
+      )}
+      <div
+        style={{
+          width: "100%",
+          textAlign: "center",
+          marginTop: "2rem",
+        }}
       >
-        load more
-      </button>
+        <Button
+          onClick={() =>
+            fetchMore({
+              variables: {
+                offset: data.pokemons.results.length,
+              },
+            })
+          }
+        >
+          Load more
+        </Button>
+      </div>
     </div>
   );
 };
