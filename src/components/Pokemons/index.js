@@ -26,7 +26,7 @@ const GET_POKEMONS = gql`
 const Pokemons = () => {
   const { error, data, fetchMore } = useQuery(GET_POKEMONS, {
     variables: {
-      limit: 10,
+      limit: 20,
       offset: 0,
     },
     fetchPolicy: "cache-and-network",
@@ -42,31 +42,33 @@ const Pokemons = () => {
       }}
     >
       {data && (
-        <Grid>
-          {data.pokemons.results.map((pokemon, key) => {
-            return <PokemonCard key={key} {...pokemon} />;
-          })}
-        </Grid>
+        <>
+          <Grid>
+            {data.pokemons.results.map((pokemon, key) => {
+              return <PokemonCard key={key} {...pokemon} />;
+            })}
+          </Grid>
+          <div
+            style={{
+              width: "100%",
+              textAlign: "center",
+              marginTop: "2rem",
+            }}
+          >
+            <Button
+              onClick={() =>
+                fetchMore({
+                  variables: {
+                    offset: data.pokemons.results.length,
+                  },
+                })
+              }
+            >
+              Load more
+            </Button>
+          </div>
+        </>
       )}
-      <div
-        style={{
-          width: "100%",
-          textAlign: "center",
-          marginTop: "2rem",
-        }}
-      >
-        <Button
-          onClick={() =>
-            fetchMore({
-              variables: {
-                offset: data.pokemons.results.length,
-              },
-            })
-          }
-        >
-          Load more
-        </Button>
-      </div>
     </div>
   );
 };

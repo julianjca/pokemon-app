@@ -6,6 +6,6 @@ export const Grid = styled.div`
   grid-gap: 1rem;
 
   @media (min-width: 720px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 `;

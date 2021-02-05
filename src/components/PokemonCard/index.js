@@ -1,13 +1,16 @@
 import React from "react";
+import Link from "next/link";
 
 import { Card } from "./styles";
 
 const PokemonCard = ({ name, image }) => {
   return (
-    <Card>
-      <img src={image} alt={name} />
-      <div>{name}</div>
-    </Card>
+    <Link href={`/pokemons/${name}`}>
+      <Card>
+        <img src={image} alt={name} />
+        <div>{name}</div>
+      </Card>
+    </Link>
   );
 };
 
