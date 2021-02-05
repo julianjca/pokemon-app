@@ -9,7 +9,9 @@ const baseCss = css`
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
+  cursor: pointer;
 `;
+
 export const StyledButton = styled.button`
   ${baseCss}
 `;

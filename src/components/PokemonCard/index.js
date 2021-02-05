@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { Card } from "./styles";
+import { Card, Pokeball } from "./styles";
 
 const PokemonCard = ({ name, image }) => {
   return (
@@ -9,6 +9,7 @@ const PokemonCard = ({ name, image }) => {
       <Card>
         <img src={image} alt={name} />
         <div>{name}</div>
+        <Pokeball src="/pokeball.svg" />
       </Card>
     </Link>
   );
