@@ -23,3 +23,24 @@ export const globalStyles = (
     `}
   />
 );
+
+export const theme = {
+  colors: {
+    primary: "#193569",
+    tertiary: "#152c57",
+    background: "#ffffff",
+    secondary: "#FDC903",
+  },
+  breakpoints: {
+    xxs: "350px",
+    xs: "420px",
+    md: "720px",
+    lg: "900px",
+    xl: "1000px",
+    xxl: "1200px",
+    xxxl: "1400px",
+  },
+  fonts: {
+    primary: "Inter, sans-serif",
+  },
+};

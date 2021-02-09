@@ -7,12 +7,22 @@ export const Card = styled.a`
   justify-content: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  height: 180px;
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: 0.1 all ease-in-out;
+  background: #ffffff;
+  color: ${(props) => props.theme.colors.primary};
+  margin: 0 10px 10px 0;
+  height: 150px;
+  width: 150px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    height: 180px;
+    width: 180px;
+    margin: 0 15px 15px 0;
+  }
 
   &:hover {
     transform: translateY(-3px);
@@ -29,7 +39,7 @@ export const Pokeball = styled.img`
 `;
 
 export const PokemonName = styled.div`
-  font-family: Inter;
-  font-weight: 700;
+  font-family: ${(props) => props.theme.fonts.primary};
+  font-weight: bold;
   text-transform: capitalize;
 `;

@@ -9,15 +9,30 @@ import {
   CatchPokemonButton,
   AttributesGrid,
   AttributesTitle,
+  Tag,
+  RadarChartWrapper,
+  PokemonDetailContainer,
+  TagsContainer,
+  Left,
 } from "./styles";
-import { usePokemonDispatch } from "../../context";
+import { usePokemonDispatch, usePokemonState } from "../../context";
 import Button from "../Button";
+import { makeSentenceCase, countPokemon } from "../../lib";
 
 const PokemonDetail = ({ pokemonData }) => {
   const dispatch = usePokemonDispatch();
+  const state = usePokemonState();
 
-  const labels = [...pokemonData.stats].map(({ stat }) => stat.name);
+  // eslint-disable-next-line no-unused-vars
+  const pokemonCount = countPokemon(state.pokemons, pokemonData.name) || 0;
+
+  const labels = [...pokemonData.stats].map(({ stat }) =>
+    stat.name === "special-defense"
+      ? "S. Defense"
+      : makeSentenceCase(stat.name.split("-").join(" "))
+  );
   const data = [...pokemonData.stats].map(({ base_stat }) => base_stat);
+
   const handleAddPokemon = () => {
     // generate number 0 or 1 (50% chance to catch)
     const isCatched = Boolean(Math.round(Math.random()));
@@ -31,50 +46,58 @@ const PokemonDetail = ({ pokemonData }) => {
   };
 
   return (
-    <div
-      style={{
-        padding: "4rem 0",
-      }}
-    >
+    <PokemonDetailContainer>
       <ImageWrapper>
-        <PokemonImage
-          src={pokemonData.sprites.front_default}
-          alt={pokemonData.name}
-        />
-        <PokemonImage
-          src={pokemonData.sprites.back_default}
-          alt={pokemonData.name}
-        />
+        <PokemonImage>
+          <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+        </PokemonImage>
+        <PokemonImage>
+          <img src={pokemonData.sprites.back_default} alt={pokemonData.name} />
+        </PokemonImage>
       </ImageWrapper>
       <PokemonName>{pokemonData.name}</PokemonName>
 
       <AttributesGrid>
-        <div>
+        <Left>
           <div>
             <AttributesTitle>Moves</AttributesTitle>
+            <TagsContainer>
+              {pokemonData.abilities.map(({ ability: { name } }) => (
+                <Tag key={name}>{name}</Tag>
+              ))}
+            </TagsContainer>
           </div>
           <div>
             <AttributesTitle>Types</AttributesTitle>
+            <TagsContainer>
+              {pokemonData.types.map(({ type: { name } }) => (
+                <Tag key={name}>{name}</Tag>
+              ))}
+            </TagsContainer>
           </div>
-        </div>
-        <Radar
-          data={{
-            datasets: [
-              {
-                label: pokemonData.name,
-                backgroundColor: "#f5656540",
-                pointBackgroundColor: "#d35858",
-                borderColor: "#d35858",
-                data,
-              },
-            ],
-            labels,
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: true,
-          }}
-        />
+        </Left>
+        <RadarChartWrapper>
+          <Radar
+            data={{
+              datasets: [
+                {
+                  label: pokemonData.name,
+                  backgroundColor: "#152C5740",
+                  pointBackgroundColor: "#152C57",
+                  borderColor: "#152C57",
+                  data,
+                },
+              ],
+              labels,
+            }}
+            height={50}
+            width={50}
+            options={{
+              responsive: true,
+              maintainAspectRatio: true,
+            }}
+          />
+        </RadarChartWrapper>
       </AttributesGrid>
 
       <CatchPokemonButton onClick={handleAddPokemon}>
@@ -82,6 +105,8 @@ const PokemonDetail = ({ pokemonData }) => {
           style={{
             borderRadius: "100px",
             width: "220px",
+            boxShadow: `0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05)`,
           }}
         >
           <div
@@ -90,18 +115,18 @@ const PokemonDetail = ({ pokemonData }) => {
               alignItems: "center",
             }}
           >
+            <Image src="/pokeball.png" alt="pokeball" height={40} width={40} />
             <span
               style={{
-                marginRight: "20px",
+                marginLeft: "20px",
               }}
             >
               Catch pokemon
             </span>
-            <Image src="/pokeball.png" alt="pokeball" height={40} width={40} />
           </div>
         </Button>
       </CatchPokemonButton>
-    </div>
+    </PokemonDetailContainer>
   );
 };
 

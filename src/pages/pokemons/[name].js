@@ -1,7 +1,9 @@
 import React from "react";
+import Head from "next/head";
 
 import { gql, useQuery } from "@apollo/client";
 import PokemonDetail from "../../components/PokemonDetail";
+import { makeSentenceCase } from "../../lib";
 
 const GET_POKEMON_DATA = gql`
   query pokemon($name: String!) {
@@ -47,7 +49,14 @@ const PokemonDetailPage = ({ name }) => {
   }
 
   if (data) {
-    return <PokemonDetail pokemonData={data.pokemon} />;
+    return (
+      <>
+        <Head>
+          <title>{makeSentenceCase(data.pokemon.name)}</title>
+        </Head>
+        <PokemonDetail pokemonData={data.pokemon} />
+      </>
+    );
   }
   return null;
 };

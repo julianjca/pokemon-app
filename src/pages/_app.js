@@ -1,8 +1,9 @@
 import React from "react";
-
-import { globalStyles, PageContainer } from "../components/Shared";
-import Header from "../components/Header";
+import { ThemeProvider } from "@emotion/react";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+import { globalStyles, PageContainer, theme } from "../components/Shared";
+import Header from "../components/Header";
 import { PokemonStateProvider } from "../context";
 
 const cache = new InMemoryCache({
@@ -41,11 +42,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
       <PokemonStateProvider>
-        <PageContainer>
-          {globalStyles}
-          <Header />
-          <Component {...pageProps} />
-        </PageContainer>
+        <ThemeProvider theme={theme}>
+          <PageContainer>
+            {globalStyles}
+            <Header />
+            <Component {...pageProps} />
+          </PageContainer>
+        </ThemeProvider>
       </PokemonStateProvider>
     </ApolloProvider>
   );

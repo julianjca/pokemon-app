@@ -2,7 +2,7 @@ import React from "react";
 
 import { gql, useQuery } from "@apollo/client";
 
-import PokemonCard from "../PokemonCard";
+import PokemonCard from "./PokemonCard";
 import { Grid } from "./styles";
 import Button from "../Button";
 
