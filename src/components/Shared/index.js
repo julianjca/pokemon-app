@@ -17,7 +17,7 @@ export const globalStyles = (
         margin: 0;
         background: #ffffff;
         min-height: 100%;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: Inter, Arial, sans-serif;
         font-size: 16px;
       }
     `}

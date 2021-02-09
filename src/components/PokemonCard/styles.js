@@ -27,3 +27,9 @@ export const Pokeball = styled.img`
   right: -60px;
   height: 200px;
 `;
+
+export const PokemonName = styled.div`
+  font-family: Inter;
+  font-weight: 700;
+  text-transform: capitalize;
+`;

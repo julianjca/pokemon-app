@@ -17,6 +17,13 @@ const GET_POKEMON_DATA = gql`
           name
         }
       }
+      stats {
+        base_stat
+        effort
+        stat {
+          name
+        }
+      }
       types {
         type {
           name
