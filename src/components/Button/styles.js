@@ -12,6 +12,7 @@ const baseCss = (props) => css`
   cursor: pointer;
   transition: 0.15s all ease-in-out;
   outline: none;
+  width: ${props.fullWidth && "100%"};
 
   &:hover {
     background-color: ${props.theme.colors.tertiary};

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 import { gql, useQuery } from "@apollo/client";
 import PokemonDetail from "../../components/PokemonDetail";
 import { makeSentenceCase } from "../../lib";
+import Modal from "../../components/Modal";
 
 const GET_POKEMON_DATA = gql`
   query pokemon($name: String!) {
@@ -44,6 +45,18 @@ const PokemonDetailPage = ({ name }) => {
     fetchPolicy: "cache-and-network",
   });
 
+  const [isModalOpened, setModalOpened] = useState(false);
+  const [modalComponent, setModalComponent] = useState(null);
+
+  const handleOpenModal = (modalState, component) => {
+    setModalOpened(modalState);
+    setModalComponent(component);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpened(false);
+  };
+
   if (error) {
     return null;
   }
@@ -54,7 +67,12 @@ const PokemonDetailPage = ({ name }) => {
         <Head>
           <title>{makeSentenceCase(data.pokemon.name)}</title>
         </Head>
-        <PokemonDetail pokemonData={data.pokemon} />
+        <PokemonDetail
+          pokemonData={data.pokemon}
+          handleOpenModal={handleOpenModal}
+          handleCloseModal={handleCloseModal}
+        />
+        {isModalOpened && <Modal>{modalComponent}</Modal>}
       </>
     );
   }

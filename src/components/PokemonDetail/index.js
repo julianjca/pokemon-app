@@ -18,10 +18,13 @@ import {
 import { usePokemonDispatch, usePokemonState } from "../../context";
 import Button from "../Button";
 import { makeSentenceCase, countPokemon } from "../../lib";
+import SuccessModal from "./SuccessModal";
 
-const PokemonDetail = ({ pokemonData }) => {
+const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
   const dispatch = usePokemonDispatch();
   const state = usePokemonState();
+
+  console.log(state);
 
   // eslint-disable-next-line no-unused-vars
   const pokemonCount = countPokemon(state.pokemons, pokemonData.name) || 0;
@@ -33,16 +36,27 @@ const PokemonDetail = ({ pokemonData }) => {
   );
   const data = [...pokemonData.stats].map(({ base_stat }) => base_stat);
 
-  const handleAddPokemon = () => {
+  const submitPokemon = (pokemonNickname) => {
+    dispatch({
+      type: "ADD_POKEMON",
+      pokemon: { pokemonName: pokemonData.name, pokemonNickname },
+    });
+
+    handleCloseModal();
+  };
+
+  const handleCatch = () => {
     // generate number 0 or 1 (50% chance to catch)
     const isCatched = Boolean(Math.round(Math.random()));
 
     if (isCatched) {
-      dispatch({
-        type: "ADD_POKEMON",
-        pokemon: pokemonData.name,
-      });
+      handleOpenModal(
+        true,
+        <SuccessModal onClick={submitPokemon} pokemonName={pokemonData.name} />
+      );
+      return;
     }
+    handleOpenModal(true, <div>failed catching</div>);
   };
 
   return (
@@ -100,7 +114,7 @@ const PokemonDetail = ({ pokemonData }) => {
         </RadarChartWrapper>
       </AttributesGrid>
 
-      <CatchPokemonButton onClick={handleAddPokemon}>
+      <CatchPokemonButton onClick={handleCatch}>
         <Button
           style={{
             borderRadius: "100px",
