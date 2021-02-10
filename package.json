@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "jest --updateSnapshot"
   },
   "dependencies": {
     "@apollo/client": "^3.3.7",
@@ -24,6 +24,7 @@
     "@apollo/react-testing": "^4.0.0",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-proposal-decorators": "^7.12.13",
+    "@emotion/jest": "^11.2.0",
     "@testing-library/cypress": "^5.0.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",

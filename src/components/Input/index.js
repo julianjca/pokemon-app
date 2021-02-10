@@ -11,8 +11,8 @@ const StyledInput = styled.input`
   box-sizing: border-box;
 `;
 
-const Input = (props) => {
-  return <StyledInput {...props} />;
+const Input = ({ onChange, value, ...rest }) => {
+  return <StyledInput onChange={onChange} value={value} {...rest} />;
 };
 
 export default Input;

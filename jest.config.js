@@ -6,4 +6,5 @@ module.exports = {
   // snapshotSerializers: ["jest-emotion"],
   // testEnvironment: "jest-environment-jsdom-sixteen",
   setupFilesAfterEnv: ["<rootDir>/setupTests.js"],
+  snapshotSerializers: ["@emotion/jest/serializer"],
 };
