@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import Heading from "../Heading";
 import Input from "../Input";
 import { Spacing } from "../Shared";
 import Button from "../Button";
+import { usePokemonState } from "../../context";
+import { ErrorMessage } from "./styles";
 
-const SuccessModal = ({ onClick }) => {
+const SuccessModal = ({ onClick, pokemonName }) => {
   const [pokemonNickname, setPokemonNickname] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+  const state = usePokemonState();
+
+  const handleSubmit = useCallback(() => {
+    const pokemonIndex = state.pokemons.findIndex(
+      (pokemon) =>
+        pokemon.pokemonName === pokemonName &&
+        pokemonNickname === pokemon.pokemonNickname
+    );
+
+    if (pokemonIndex === -1) {
+      onClick(pokemonNickname);
+      setErrorMessage(null);
+      return;
+    }
+
+    setErrorMessage("Nickname should be unique.");
+  }, [onClick, pokemonNickname, pokemonName, state.pokemons]);
 
   return (
     <div>
@@ -38,9 +58,10 @@ const SuccessModal = ({ onClick }) => {
           fullWidth
           type="text"
         />
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       </Spacing>
       <Spacing margin="20px 0 0">
-        <Button onClick={() => onClick(pokemonNickname)} fullWidth>
+        <Button onClick={handleSubmit} fullWidth>
           Save!
         </Button>
       </Spacing>

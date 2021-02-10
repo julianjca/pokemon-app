@@ -19,12 +19,12 @@ import { usePokemonDispatch, usePokemonState } from "../../context";
 import Button from "../Button";
 import { makeSentenceCase, countPokemon } from "../../lib";
 import SuccessModal from "./SuccessModal";
+import FailedModal from "./FailedModal";
+import CatchingPokemon from "./CatchingPokemon";
 
 const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
   const dispatch = usePokemonDispatch();
   const state = usePokemonState();
-
-  console.log(state);
 
   // eslint-disable-next-line no-unused-vars
   const pokemonCount = countPokemon(state.pokemons, pokemonData.name) || 0;
@@ -49,14 +49,24 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
     // generate number 0 or 1 (50% chance to catch)
     const isCatched = Boolean(Math.round(Math.random()));
 
+    // showing loading modal
+    handleOpenModal(true, <CatchingPokemon />);
+
     if (isCatched) {
-      handleOpenModal(
-        true,
-        <SuccessModal onClick={submitPokemon} pokemonName={pokemonData.name} />
-      );
+      setTimeout(() => {
+        handleOpenModal(
+          true,
+          <SuccessModal
+            onClick={submitPokemon}
+            pokemonName={pokemonData.name}
+          />
+        );
+      }, 1500);
       return;
     }
-    handleOpenModal(true, <div>failed catching</div>);
+    setTimeout(() => {
+      handleOpenModal(true, <FailedModal onClick={handleCatch} />);
+    }, 1500);
   };
 
   return (
@@ -129,7 +139,12 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
               alignItems: "center",
             }}
           >
-            <Image src="/pokeball.png" alt="pokeball" height={40} width={40} />
+            <Image
+              src="/catch_pokeball.png"
+              alt="pokeball"
+              height={40}
+              width={40}
+            />
             <span
               style={{
                 marginLeft: "20px",

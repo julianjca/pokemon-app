@@ -98,10 +98,17 @@ export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
 `;
 
 export const Left = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 45%;
   }
+`;
+
+export const ErrorMessage = styled.div`
+  color: red;
+  margin-top: 5px;
+  font-size: 0.8rem;
 `;
