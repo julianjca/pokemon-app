@@ -13,12 +13,16 @@ const reducer = (state, action) => {
       return { pokemons };
     }
     case RELEASE_POKEMON: {
+      const pokemons = [...state.pokemons].filter(
+        (pokemon) =>
+          pokemon.pokemonName !== action.pokemonName ||
+          pokemon.pokemonNickname !== action.pokemonNickname
+      );
+
+      localStorage.setItem("pokemons", JSON.stringify(pokemons));
+
       return {
-        pokemons: [...state.pokemons].filter(
-          (pokemon) =>
-            pokemon.pokemonName !== action.pokemonName &&
-            pokemon.pokemonNickname !== action.pokemonNickname
-        ),
+        pokemons,
       };
     }
     case SET_POKEMONS: {
