@@ -1,19 +1,27 @@
 import React, { useEffect, createContext, useReducer } from "react";
 
+import { ADD_POKEMON, RELEASE_POKEMON, SET_POKEMONS } from "../constants";
+
 const PokemonStateContext = createContext();
 const PokemonDispatchContext = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADD_POKEMON": {
+    case ADD_POKEMON: {
       const pokemons = [...state.pokemons].concat(action.pokemon);
       localStorage.setItem("pokemons", JSON.stringify(pokemons));
       return { pokemons };
     }
-    case "REMOVE_POKEMON": {
-      return { pokemons: state.count - 1 };
+    case RELEASE_POKEMON: {
+      return {
+        pokemons: [...state.pokemons].filter(
+          (pokemon) =>
+            pokemon.pokemonName !== action.pokemonName &&
+            pokemon.pokemonNickname !== action.pokemonNickname
+        ),
+      };
     }
-    case "SET_POKEMONS": {
+    case SET_POKEMONS: {
       return { pokemons: action.pokemons };
     }
     default:

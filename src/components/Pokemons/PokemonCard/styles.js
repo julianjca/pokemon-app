@@ -15,8 +15,8 @@ export const Card = styled.a`
   background: #ffffff;
   color: ${(props) => props.theme.colors.primary};
   margin: 0 10px 10px 0;
-  height: 150px;
-  width: 150px;
+  height: 160px;
+  width: 160px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     height: 180px;

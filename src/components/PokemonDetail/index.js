@@ -39,7 +39,11 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
   const submitPokemon = (pokemonNickname) => {
     dispatch({
       type: "ADD_POKEMON",
-      pokemon: { pokemonName: pokemonData.name, pokemonNickname },
+      pokemon: {
+        pokemonName: pokemonData.name,
+        pokemonNickname,
+        sprites: pokemonData.sprites,
+      },
     });
 
     handleCloseModal();
