@@ -10,6 +10,7 @@ const GET_POKEMONS = gql`
   query pokemons($limit: Int, $offset: Int) {
     pokemons(limit: $limit, offset: $offset) {
       results {
+        id
         url
         name
         image
@@ -21,7 +22,7 @@ const GET_POKEMONS = gql`
 const Pokemons = () => {
   const { error, data, fetchMore } = useQuery(GET_POKEMONS, {
     variables: {
-      limit: 20,
+      limit: 30,
       offset: 0,
     },
     fetchPolicy: "cache-and-network",

@@ -14,3 +14,12 @@ export const countPokemon = (pokemons, name) => {
     {}
   )[name];
 };
+
+export const uniqBy = (arr, key) => {
+  const seen = {};
+
+  return arr.filter((item) => {
+    const k = key(item);
+    return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+  });
+};
