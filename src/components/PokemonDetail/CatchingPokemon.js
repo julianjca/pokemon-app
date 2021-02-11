@@ -48,7 +48,12 @@ const CatchingPokemon = () => {
         <Heading size="xl">Catching pokemon</Heading>
       </Spacing>
       <PokeballWrapper>
-        <Image src="/pokeball.png" height={60} width={60} />
+        <Image
+          src="/pokeball.png"
+          alt="catching pokemon"
+          height={60}
+          width={60}
+        />
       </PokeballWrapper>
     </Wrapper>
   );

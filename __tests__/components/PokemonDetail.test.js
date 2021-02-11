@@ -5,6 +5,7 @@ import { matchers } from "@emotion/jest";
 import { render, fireEvent, act } from "../../test-utils";
 import PokemonDetail from "../../src/components/PokemonDetail";
 import * as lib from "../../src/lib";
+import CatchingPokemon from "../../src/components/PokemonDetail/CatchingPokemon";
 
 expect.extend(matchers);
 
@@ -150,6 +151,11 @@ describe("PokemonDetail", () => {
       // runs the first loading modal
       // open success modal form
       expect(handleOpenModal).toHaveBeenCalledTimes(2);
+      expect(handleOpenModal).toHaveBeenNthCalledWith(
+        1,
+        true,
+        <CatchingPokemon />
+      );
     });
 
     catchingOdds.mockRestore();
@@ -179,6 +185,11 @@ describe("PokemonDetail", () => {
       // runs the first loading modal
       // open failed modal form
       expect(handleOpenModal).toHaveBeenCalledTimes(2);
+      expect(handleOpenModal).toHaveBeenNthCalledWith(
+        1,
+        true,
+        <CatchingPokemon />
+      );
     });
 
     catchingOdds.mockRestore();

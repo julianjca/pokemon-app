@@ -1,4 +1,11 @@
-import { makeSentenceCase, countPokemon, uniqBy } from "../../src/lib";
+import {
+  makeSentenceCase,
+  countPokemon,
+  uniqBy,
+  getCatchingOdds,
+} from "../../src/lib";
+
+global.Math.random = () => 1;
 
 describe("lib", () => {
   test("makeSentenceCase", () => {
@@ -24,5 +31,11 @@ describe("lib", () => {
         JSON.stringify
       )
     ).toEqual([{ pokemonName: "bulbasaur", pokemonNickname: "robert" }]);
+  });
+
+  test("getCatchingOdds", () => {
+    const isCatched = getCatchingOdds();
+
+    expect(isCatched).toBeTruthy();
   });
 });

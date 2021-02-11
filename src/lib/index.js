@@ -25,5 +25,5 @@ export const uniqBy = (arr, key) => {
 };
 
 export const getCatchingOdds = () => {
-  return Math.round(Math.random());
+  return Boolean(Math.round(Math.random()));
 };

@@ -21,6 +21,7 @@ import { makeSentenceCase, getCatchingOdds } from "../../lib";
 import SuccessModal from "./SuccessModal";
 import FailedModal from "./FailedModal";
 import CatchingPokemon from "./CatchingPokemon";
+import { ADD_POKEMON } from "../../constants";
 
 const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
   const dispatch = usePokemonDispatch();
@@ -34,7 +35,7 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
 
   const submitPokemon = (pokemonNickname) => {
     dispatch({
-      type: "ADD_POKEMON",
+      type: ADD_POKEMON,
       pokemon: {
         pokemonName: pokemonData.name,
         pokemonNickname,
