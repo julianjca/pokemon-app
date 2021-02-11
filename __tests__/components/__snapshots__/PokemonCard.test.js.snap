@@ -87,6 +87,7 @@ Object {
           0
         </span>
         <img
+          alt="Pokeball"
           class="emotion-4 emotion-5"
           src="/pokeball.svg"
         />
@@ -176,6 +177,7 @@ Object {
         0
       </span>
       <img
+        alt="Pokeball"
         class="emotion-4 emotion-5"
         src="/pokeball.svg"
       />

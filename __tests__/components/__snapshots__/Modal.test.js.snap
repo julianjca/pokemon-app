@@ -49,6 +49,7 @@ Object {
       >
         <div
           class="emotion-2 emotion-3"
+          data-testid="modal-card"
         />
       </div>
     </div>
@@ -98,6 +99,7 @@ Object {
     >
       <div
         class="emotion-2 emotion-3"
+        data-testid="modal-card"
       />
     </div>
   </div>,

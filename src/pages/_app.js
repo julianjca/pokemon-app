@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import Head from "next/head";
 
 import { globalStyles, PageContainer, theme } from "../components/Shared";
 import Header from "../components/Header";
@@ -53,6 +54,34 @@ function MyApp({ Component, pageProps }) {
     <ApolloProvider client={client}>
       <PokemonStateProvider>
         <ThemeProvider theme={theme}>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+            />
+            <link rel="manifest" href="/manifest.json" />
+            <meta name="theme-color" content="#193569" />
+            <link
+              rel="apple-touch-icon"
+              sizes="57x57"
+              href="/icons/touch-icon-iphone-114.png"
+            />
+            <link
+              rel="apple-touch-icon"
+              sizes="114x114"
+              href="/icons/touch-icon-iphone-114.png"
+            />
+            <link
+              rel="apple-touch-icon"
+              sizes="72x72"
+              href="/icons/touch-icon-ipad-144.png"
+            />
+            <link
+              rel="apple-touch-icon"
+              sizes="144x144"
+              href="/icons/touch-icon-ipad-144.png"
+            />
+          </Head>
           <PageContainer>
             {globalStyles}
             <Header />

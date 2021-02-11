@@ -135,6 +135,7 @@ Object {
               0
             </span>
             <img
+              alt="Pokeball"
               class="emotion-6 emotion-7"
               src="/pokeball.svg"
             />
@@ -156,6 +157,7 @@ Object {
               0
             </span>
             <img
+              alt="Pokeball"
               class="emotion-6 emotion-7"
               src="/pokeball.svg"
             />
@@ -177,6 +179,7 @@ Object {
               0
             </span>
             <img
+              alt="Pokeball"
               class="emotion-6 emotion-7"
               src="/pokeball.svg"
             />
@@ -198,6 +201,7 @@ Object {
               0
             </span>
             <img
+              alt="Pokeball"
               class="emotion-6 emotion-7"
               src="/pokeball.svg"
             />
@@ -219,6 +223,7 @@ Object {
               0
             </span>
             <img
+              alt="Pokeball"
               class="emotion-6 emotion-7"
               src="/pokeball.svg"
             />
@@ -367,6 +372,7 @@ Object {
             0
           </span>
           <img
+            alt="Pokeball"
             class="emotion-6 emotion-7"
             src="/pokeball.svg"
           />
@@ -388,6 +394,7 @@ Object {
             0
           </span>
           <img
+            alt="Pokeball"
             class="emotion-6 emotion-7"
             src="/pokeball.svg"
           />
@@ -409,6 +416,7 @@ Object {
             0
           </span>
           <img
+            alt="Pokeball"
             class="emotion-6 emotion-7"
             src="/pokeball.svg"
           />
@@ -430,6 +438,7 @@ Object {
             0
           </span>
           <img
+            alt="Pokeball"
             class="emotion-6 emotion-7"
             src="/pokeball.svg"
           />
@@ -451,6 +460,7 @@ Object {
             0
           </span>
           <img
+            alt="Pokeball"
             class="emotion-6 emotion-7"
             src="/pokeball.svg"
           />

@@ -16,7 +16,7 @@ export const Card = styled.a`
   color: ${(props) => props.theme.colors.primary};
   margin: 0 10px 10px 0;
   height: 160px;
-  width: 160px;
+  width: 150px;
 
   & > span {
     font-size: 0.9rem;

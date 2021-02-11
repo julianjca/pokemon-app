@@ -4,7 +4,9 @@ import { Card, ModalWindow } from "./styles";
 const Modal = ({ children, handleCloseModal }) => {
   return (
     <ModalWindow onClick={handleCloseModal}>
-      <Card onClick={(e) => e.stopPropagation()}>{children}</Card>
+      <Card data-testid="modal-card" onClick={(e) => e.stopPropagation()}>
+        {children}
+      </Card>
     </ModalWindow>
   );
 };
