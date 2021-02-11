@@ -15,7 +15,7 @@ const PokemonCard = ({ name, image }) => {
         <img src={image} alt={name} />
         <PokemonName>{name}</PokemonName>
         <span>You have: {pokemonCount}</span>
-        <Pokeball src="/pokeball.svg" />
+        <Pokeball src="/pokeball.svg" alt="Pokeball" />
       </Card>
     </Link>
   );

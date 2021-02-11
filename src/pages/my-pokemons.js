@@ -49,7 +49,7 @@ export default function MyPokemonsPage() {
                 />
                 <PokemonName>{pokemon.pokemonName}</PokemonName>
                 <p>{pokemon.pokemonNickname}</p>
-                <Pokeball src="/pokeball.svg" />
+                <Pokeball src="/pokeball.svg" alt="Pokeball" />
                 <Button
                   style={{
                     zIndex: 10,
