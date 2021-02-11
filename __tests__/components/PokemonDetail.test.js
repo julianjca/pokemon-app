@@ -2,7 +2,7 @@
 import React from "react";
 import { matchers } from "@emotion/jest";
 
-import { render, fireEvent } from "../../test-utils";
+import { render, fireEvent, act } from "../../test-utils";
 import PokemonDetail from "../../src/components/PokemonDetail";
 import * as lib from "../../src/lib";
 
@@ -144,13 +144,13 @@ describe("PokemonDetail", () => {
     const catchPokemonButton = getByTestId("catch_pokemon");
     expect(catchPokemonButton).toBeInTheDocument();
 
-    fireEvent.click(catchPokemonButton);
-
-    jest.runAllTimers();
-
-    // runs the first loading modal
-    // open success modal form
-    expect(handleOpenModal).toHaveBeenCalledTimes(2);
+    act(() => {
+      fireEvent.click(catchPokemonButton);
+      jest.runAllTimers();
+      // runs the first loading modal
+      // open success modal form
+      expect(handleOpenModal).toHaveBeenCalledTimes(2);
+    });
 
     catchingOdds.mockRestore();
   });
@@ -171,13 +171,15 @@ describe("PokemonDetail", () => {
     const catchPokemonButton = getByTestId("catch_pokemon");
     expect(catchPokemonButton).toBeInTheDocument();
 
-    fireEvent.click(catchPokemonButton);
+    act(() => {
+      fireEvent.click(catchPokemonButton);
 
-    jest.runAllTimers();
+      jest.runAllTimers();
 
-    // runs the first loading modal
-    // open failed modal form
-    expect(handleOpenModal).toHaveBeenCalledTimes(2);
+      // runs the first loading modal
+      // open failed modal form
+      expect(handleOpenModal).toHaveBeenCalledTimes(2);
+    });
 
     catchingOdds.mockRestore();
   });
