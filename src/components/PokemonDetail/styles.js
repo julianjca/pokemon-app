@@ -53,7 +53,7 @@ export const CatchPokemonButton = styled.div`
   transform: translateX(-50%);
 `;
 
-export const AttributesGrid = styled.div`
+export const Grid = styled.div`
   width: 100%;
   max-width: 1000px;
   margin: 40px auto 0;

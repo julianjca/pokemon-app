@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, ModalWindow } from "./styles";
 
-const Modal = ({ children }) => {
+const Modal = ({ children, handleCloseModal }) => {
   return (
-    <ModalWindow>
-      <Card>{children}</Card>
+    <ModalWindow onClick={handleCloseModal}>
+      <Card onClick={(e) => e.stopPropagation()}>{children}</Card>
     </ModalWindow>
   );
 };

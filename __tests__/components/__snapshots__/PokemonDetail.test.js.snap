@@ -1,0 +1,652 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonDetail renders the component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  padding: 4rem 0 8rem;
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    padding: 4rem 0;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 img {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 720px) {
+  .emotion-4 img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.emotion-8 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+@media (min-width: 1000px) {
+  .emotion-8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+
+.emotion-10 {
+  font-size: 3rem;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #193569;
+}
+
+@media (min-width: 720px) {
+  .emotion-14 {
+    width: 45%;
+  }
+}
+
+.emotion-16 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.emotion-20 {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 12px 15px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #193569;
+  background: #FDC903;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.emotion-32 {
+  width: 100%;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+@media (min-width: 720px) {
+  .emotion-32 {
+    width: 90%;
+    margin-top: 0;
+  }
+}
+
+.emotion-34 {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-36 {
+  background-color: #193569;
+  border-radius: 0.5em;
+  border: none;
+  padding: 1em 1.2em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FDC903;
+  cursor: pointer;
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+  outline: none;
+}
+
+.emotion-36:hover {
+  background-color: #152c57;
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+}
+
+<body>
+    <div>
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          class="emotion-2 emotion-3"
+        >
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <img
+              alt="bulbasaur_front"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            />
+          </div>
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <img
+              alt="bulbasaur_back"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <h1
+            class="emotion-10 emotion-11"
+          >
+            bulbasaur
+          </h1>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <div
+            class="emotion-14 emotion-15"
+          >
+            <div>
+              <h4
+                class="emotion-16 emotion-17"
+              >
+                Moves
+              </h4>
+              <div
+                class="emotion-18 emotion-19"
+              >
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  overgrow
+                </div>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  chlorophyll
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4
+                class="emotion-16 emotion-17"
+              >
+                Types
+              </h4>
+              <div
+                class="emotion-18 emotion-19"
+              >
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  grass
+                </div>
+                <div
+                  class="emotion-20 emotion-21"
+                >
+                  poison
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-32 emotion-33"
+          />
+        </div>
+        <div
+          class="emotion-34 emotion-35"
+          data-testid="catch_pokemon"
+        >
+          <button
+            class="emotion-36 emotion-37"
+            style="border-radius: 100px; width: 220px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);"
+          >
+            <div
+              style="display: flex; align-items: center;"
+            >
+              <div
+                style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+              >
+                <div
+                  style="box-sizing: border-box; display: block; max-width: 100%;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                    style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                  />
+                </div>
+                <img
+                  alt="pokeball"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                />
+              </div>
+              <span
+                style="margin-left: 20px;"
+              >
+                Catch pokemon
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  padding: 4rem 0 8rem;
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    padding: 4rem 0;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 img {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 720px) {
+  .emotion-4 img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.emotion-8 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+@media (min-width: 1000px) {
+  .emotion-8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+
+.emotion-10 {
+  font-size: 3rem;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #193569;
+}
+
+@media (min-width: 720px) {
+  .emotion-14 {
+    width: 45%;
+  }
+}
+
+.emotion-16 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.emotion-20 {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 12px 15px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #193569;
+  background: #FDC903;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.emotion-32 {
+  width: 100%;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+@media (min-width: 720px) {
+  .emotion-32 {
+    width: 90%;
+    margin-top: 0;
+  }
+}
+
+.emotion-34 {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-36 {
+  background-color: #193569;
+  border-radius: 0.5em;
+  border: none;
+  padding: 1em 1.2em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FDC903;
+  cursor: pointer;
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+  outline: none;
+}
+
+.emotion-36:hover {
+  background-color: #152c57;
+  -webkit-transition: 0.15s all ease-in-out;
+  transition: 0.15s all ease-in-out;
+}
+
+<div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <img
+            alt="bulbasaur_front"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <img
+            alt="bulbasaur_back"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+          />
+        </div>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <h1
+          class="emotion-10 emotion-11"
+        >
+          bulbasaur
+        </h1>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <div
+          class="emotion-14 emotion-15"
+        >
+          <div>
+            <h4
+              class="emotion-16 emotion-17"
+            >
+              Moves
+            </h4>
+            <div
+              class="emotion-18 emotion-19"
+            >
+              <div
+                class="emotion-20 emotion-21"
+              >
+                overgrow
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              >
+                chlorophyll
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4
+              class="emotion-16 emotion-17"
+            >
+              Types
+            </h4>
+            <div
+              class="emotion-18 emotion-19"
+            >
+              <div
+                class="emotion-20 emotion-21"
+              >
+                grass
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              >
+                poison
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-32 emotion-33"
+        />
+      </div>
+      <div
+        class="emotion-34 emotion-35"
+        data-testid="catch_pokemon"
+      >
+        <button
+          class="emotion-36 emotion-37"
+          style="border-radius: 100px; width: 220px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);"
+        >
+          <div
+            style="display: flex; align-items: center;"
+          >
+            <div
+              style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="box-sizing: border-box; display: block; max-width: 100%;"
+              >
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  role="presentation"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                  style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
+                />
+              </div>
+              <img
+                alt="pokeball"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+            <span
+              style="margin-left: 20px;"
+            >
+              Catch pokemon
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

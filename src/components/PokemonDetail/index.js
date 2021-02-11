@@ -7,27 +7,23 @@ import {
   PokemonImage,
   PokemonName,
   CatchPokemonButton,
-  AttributesGrid,
   AttributesTitle,
   Tag,
   RadarChartWrapper,
   PokemonDetailContainer,
   TagsContainer,
   Left,
+  Grid,
 } from "./styles";
-import { usePokemonDispatch, usePokemonState } from "../../context";
+import { usePokemonDispatch } from "../../context";
 import Button from "../Button";
-import { makeSentenceCase, countPokemon } from "../../lib";
+import { makeSentenceCase, getCatchingOdds } from "../../lib";
 import SuccessModal from "./SuccessModal";
 import FailedModal from "./FailedModal";
 import CatchingPokemon from "./CatchingPokemon";
 
 const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
   const dispatch = usePokemonDispatch();
-  const state = usePokemonState();
-
-  // eslint-disable-next-line no-unused-vars
-  const pokemonCount = countPokemon(state.pokemons, pokemonData.name) || 0;
 
   const labels = [...pokemonData.stats].map(({ stat }) =>
     stat.name === "special-defense"
@@ -51,7 +47,7 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
 
   const handleCatch = () => {
     // generate number 0 or 1 (50% chance to catch)
-    const isCatched = Boolean(Math.round(Math.random()));
+    const isCatched = getCatchingOdds();
 
     // showing loading modal
     handleOpenModal(true, <CatchingPokemon />);
@@ -77,15 +73,23 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
     <PokemonDetailContainer>
       <ImageWrapper>
         <PokemonImage>
-          <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+          <img
+            src={pokemonData.sprites.front_default}
+            alt={`${pokemonData.name}_front`}
+          />
         </PokemonImage>
         <PokemonImage>
-          <img src={pokemonData.sprites.back_default} alt={pokemonData.name} />
+          <img
+            src={pokemonData.sprites.back_default}
+            alt={`${pokemonData.name}_back`}
+          />
         </PokemonImage>
       </ImageWrapper>
-      <PokemonName>{pokemonData.name}</PokemonName>
+      <Grid>
+        <PokemonName>{pokemonData.name}</PokemonName>
+      </Grid>
 
-      <AttributesGrid>
+      <Grid>
         <Left>
           <div>
             <AttributesTitle>Moves</AttributesTitle>
@@ -126,9 +130,9 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
             }}
           />
         </RadarChartWrapper>
-      </AttributesGrid>
+      </Grid>
 
-      <CatchPokemonButton onClick={handleCatch}>
+      <CatchPokemonButton data-testid="catch_pokemon" onClick={handleCatch}>
         <Button
           style={{
             borderRadius: "100px",

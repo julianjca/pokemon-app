@@ -72,7 +72,9 @@ const PokemonDetailPage = ({ name }) => {
           handleOpenModal={handleOpenModal}
           handleCloseModal={handleCloseModal}
         />
-        {isModalOpened && <Modal>{modalComponent}</Modal>}
+        {isModalOpened && (
+          <Modal handleCloseModal={handleCloseModal}>{modalComponent}</Modal>
+        )}
       </>
     );
   }

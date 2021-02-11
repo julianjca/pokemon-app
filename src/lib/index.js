@@ -9,7 +9,7 @@ export const countPokemon = (pokemons, name) => {
   return pokemons.reduce(
     (acc, value) => ({
       ...acc,
-      [value]: (acc[value] || 0) + 1,
+      [value.pokemonName]: (acc[value.pokemonName] || 0) + 1,
     }),
     {}
   )[name];
@@ -22,4 +22,8 @@ export const uniqBy = (arr, key) => {
     const k = key(item);
     return seen.hasOwnProperty(k) ? false : (seen[k] = true);
   });
+};
+
+export const getCatchingOdds = () => {
+  return getCatchingOdds;
 };

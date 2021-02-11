@@ -18,6 +18,11 @@ export const Card = styled.a`
   height: 160px;
   width: 160px;
 
+  & > span {
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     height: 180px;
     width: 180px;
