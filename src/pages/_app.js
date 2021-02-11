@@ -81,6 +81,7 @@ function MyApp({ Component, pageProps }) {
               sizes="144x144"
               href="/icons/touch-icon-ipad-144.png"
             />
+            <meta name="color-scheme" content="only" />
           </Head>
           <PageContainer>
             {globalStyles}
