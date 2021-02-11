@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonCard renders the component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.1 all ease-in-out;
+  transition: 0.1 all ease-in-out;
+  background: #ffffff;
+  color: #193569;
+  margin: 0 10px 10px 0;
+  height: 160px;
+  width: 160px;
+}
+
+.emotion-0>span {
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    height: 180px;
+    width: 180px;
+    margin: 0 15px 15px 0;
+  }
+}
+
+.emotion-0:hover {
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+
+.emotion-2 {
+  font-family: Inter,sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.08;
+  bottom: -58px;
+  right: -60px;
+  height: 200px;
+}
+
+<body>
+    <div>
+      <a
+        class="emotion-0 emotion-1"
+      >
+        <img
+          alt="bulbasaur"
+        />
+        <div
+          class="emotion-2 emotion-3"
+        >
+          bulbasaur
+        </div>
+        <span>
+          You have: 
+          0
+        </span>
+        <img
+          class="emotion-4 emotion-5"
+          src="/pokeball.svg"
+        />
+      </a>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.1 all ease-in-out;
+  transition: 0.1 all ease-in-out;
+  background: #ffffff;
+  color: #193569;
+  margin: 0 10px 10px 0;
+  height: 160px;
+  width: 160px;
+}
+
+.emotion-0>span {
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+@media (min-width: 720px) {
+  .emotion-0 {
+    height: 180px;
+    width: 180px;
+    margin: 0 15px 15px 0;
+  }
+}
+
+.emotion-0:hover {
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+
+.emotion-2 {
+  font-family: Inter,sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.emotion-4 {
+  position: absolute;
+  opacity: 0.08;
+  bottom: -58px;
+  right: -60px;
+  height: 200px;
+}
+
+<div>
+    <a
+      class="emotion-0 emotion-1"
+    >
+      <img
+        alt="bulbasaur"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        bulbasaur
+      </div>
+      <span>
+        You have: 
+        0
+      </span>
+      <img
+        class="emotion-4 emotion-5"
+        src="/pokeball.svg"
+      />
+    </a>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
