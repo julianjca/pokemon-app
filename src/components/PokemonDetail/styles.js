@@ -15,9 +15,6 @@ export const ImageWrapper = styled.div`
 `;
 
 export const PokemonImage = styled.div`
-  /* width: 150px;
-  height: 150px;
-  overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,9 +25,6 @@ export const PokemonImage = styled.div`
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-    /* width: 250px;
-    height: 250px; */
-
     img {
       width: 300px;
       height: 300px;
@@ -108,7 +102,7 @@ export const Left = styled.div`
 `;
 
 export const ErrorMessage = styled.div`
-  color: red;
+  color: #f56565;
   margin-top: 5px;
   font-size: 0.8rem;
 `;
