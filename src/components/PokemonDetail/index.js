@@ -114,7 +114,7 @@ const PokemonDetail = ({ pokemonData, handleOpenModal, handleCloseModal }) => {
             data={{
               datasets: [
                 {
-                  label: pokemonData.name,
+                  label: makeSentenceCase(pokemonData.name),
                   backgroundColor: "#152C5740",
                   pointBackgroundColor: "#152C57",
                   borderColor: "#152C57",
