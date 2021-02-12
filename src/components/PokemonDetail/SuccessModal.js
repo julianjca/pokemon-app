@@ -25,7 +25,7 @@ const SuccessModal = ({ onClick, pokemonName }) => {
       return;
     }
 
-    setErrorMessage("Nickname should be unique for a the same Pokemon.");
+    setErrorMessage("Nickname should be unique for the same Pokemon.");
   }, [onClick, pokemonNickname, pokemonName, state.pokemons]);
 
   return (

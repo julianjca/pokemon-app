@@ -11,4 +11,5 @@ module.exports = withPWA({
     disable: !prod,
     runtimeCaching,
   },
+  target: "experimental-serverless-trace",
 });
