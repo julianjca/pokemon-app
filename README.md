@@ -1,7 +1,14 @@
 # Pokemon App
-Deployment: https://pokemon-app-weld.vercel.app/
+Deployment: 
+- https://poke-app-six.vercel.app/ (Vercel was down, so I created a backup deployment)
+- https://dreamy-neumann-69f9d5.netlify.app/
 
 This app supports PWA.
+
+## Pages
+- Pokemons list (`/`)
+- Pokemon detail page (`/pokemons/[name]`)
+- My Pokemons page (`/my-pokemons`)
 
 ## Prerequisites
 
